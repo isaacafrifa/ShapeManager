@@ -8,9 +8,19 @@ package shapemanager;
  *
  * @author theblo
  */
-public class Rectangle implements Shape {
+public class Rectangle extends DrawingTemplate implements Shape {
     @Override
     public void sayName() {
         System.out.println("Rectangle");
+    }
+    
+     @Override
+    void getshape() {
+        System.out.println("Shape: Rectangle");
+    }
+
+    @Override
+    void startDrawing() {
+        System.out.println("Drawing a rectangle");    
     }
 }

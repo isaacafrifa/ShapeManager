@@ -38,6 +38,15 @@ public class ShapeDemo {
         for (Shape shape : shapeGroup) {
             shape.sayName();
         }
+        
+        System.out.println("\nDrawing using template method:");
+        DrawingTemplate drawCircle= new Circle();
+        DrawingTemplate drawRectangle= new Rectangle();
+        drawCircle.draw();
+        System.out.println("");
+        drawRectangle.draw();
+        
+        
 
     }
 
