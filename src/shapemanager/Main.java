@@ -1,11 +1,10 @@
 package shapemanager;
 
-
 /**
  *
- * This is the run class
+ * This is the main class
  */
-public class ShapeDemo {
+public class Main {
 
     public static void main(String[] args) {
 
@@ -46,8 +45,6 @@ public class ShapeDemo {
         System.out.println("");
         drawRectangle.draw();
         
-        
-
     }
 
 }
