@@ -18,10 +18,12 @@ public class Main {
         shapeGroup.addShape(circle);
         shapeGroup.addShape(rectangle);
 
-        System.out.println("\nIndividual shapes:");
+        System.out.println("--- FACTORY ---");
+        System.out.println("Individual shapes:");
         circle.sayName();
         rectangle.sayName();
 
+         System.out.println("\n--- COMPOSITE ---");
         //create nested group(group1)
         ShapeGroup group1 = new ShapeGroup();
         group1.addShape(circle);
@@ -30,21 +32,27 @@ public class Main {
 
         shapeGroup.addShape(group1);
 
-        System.out.println("\nShape group:");
+        System.out.println("Shape group:");
         shapeGroup.sayName();
 
-        System.out.println("\nIterating over shape group:");
+         System.out.println("\n--- ITERATOR ---");
+        System.out.println("Iterating over shape group:");
         for (Shape shape : shapeGroup) {
             shape.sayName();
         }
         
-        System.out.println("\nDrawing using template method:");
+         System.out.println("\n---TEMPLATE METHOD ---");
+        System.out.println("Drawing using template method:");
         DrawingTemplate drawCircle= new Circle();
         DrawingTemplate drawRectangle= new Rectangle();
         drawCircle.draw();
         System.out.println("");
         drawRectangle.draw();
         
+         System.out.println("\n--- PROXY ---");
+        System.out.println("Painting using proxy method:");
+        Painter painter= new ProxyPainter();
+        painter.paint("blue");
     }
 
 }
